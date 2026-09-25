@@ -284,9 +284,10 @@ Spartan was introduced by Setty in 2019, reviving ideas from the GKR protocol (2
 
 R1CS constraint satisfaction can be expressed as a polynomial sum equaling zero:
 
-$$\sum_{x \in \{0,1\}^k} \tilde{\text{eq}}(x) \cdot \left[\tilde{A}(x) \cdot \tilde{B}(x) - \tilde{C}(x)\right] = 0$$
+$$\sum_{x \in \{0,1\}^k} \widetilde{\text{eq}}(\tau, x) \cdot \left[\widetilde{A}(x) \cdot \widetilde{B}(x) - \widetilde{C}(x)\right] = 0$$
 
-Here $\tilde{A}(x)$, $\tilde{B}(x)$, $\tilde{C}(x)$ are the MLEs of the matrix-vector products $A \cdot Z$, $B \cdot Z$, $C \cdot Z$ respectively, each viewed as a function from row index $x \in \{0,1\}^{\log m}$ to a field element.
+
+Here $\tau \in \mathbb{F}^k$ is verifier-chosen randomness; $\widetilde{A}(x)$, $\widetilde{B}(x)$, $\widetilde{C}(x)$ are the MLEs of the matrix-vector products $A \cdot Z$, $B \cdot Z$, $C \cdot Z$ respectively, each viewed as a function from row index $x \in \{0,1\}^{\log m}$ to a field element.
 
 This formulation matters for three reasons:
 
