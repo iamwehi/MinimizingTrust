@@ -147,7 +147,7 @@ Sum-check systems produce larger proofs (logarithmic, not constant), have newer 
 
 The boundaries between the categories above are blurring in production zkVMs. The major systems as of 2026:
 
-- **SP1** (Succinct): migrated from STARK-based (SP1 Turbo, FRI over BabyBear) to sum-check-based (SP1 Hypercube, multilinear polynomials with a jagged PCS from Chapter 21 and Logup-GKR). Proves over 93% of Ethereum blocks in under 12 seconds (average 10.3s) on a cluster of ~160 RTX 4090 GPUs (~$300-400K in hardware).
+- **SP1** (Succinct): migrated from STARK-based (SP1 Turbo, FRI over BabyBear) to sum-check-based (SP1 Hypercube, multilinear polynomials with a jagged PCS from Chapter 21 and Logup-GKR). Proves over 93% of Ethereum blocks in under 12 seconds (average 10.3s) on a cluster of \~160 RTX 4090 GPUs (\~\$300-400K in hardware).
 - **RISC Zero**: STARK-based with FRI over BabyBear, Groth16 wrapper for on-chain verification. Proves Ethereum blocks in under 45 seconds.
 - **Jolt** (a16z): pure sum-check with Lasso lookups (Chapter 21) and Twist/Shout memory checking. Over 1 million RISC-V cycles per second on a 32-core CPU.
 - **ZKsync Airbender**: STARK-based over Mersenne31 with a custom DEEP-ALI implementation.
@@ -155,6 +155,7 @@ The boundaries between the categories above are blurring in production zkVMs. Th
 - **Lean Ethereum** (Ethereum Foundation): minimal zkVM using Whirlaway (SuperSpartan + WHIR) over KoalaBear, targeting provable 128-bit post-quantum security.
 
 All of these use small fields (BabyBear or Mersenne31), AIR or CCS constraints, and Logup-style bus arguments for cross-table consistency. The convergence on shared primitives (Chapter 20) is striking even as the architectural choices diverge.
+
 
 ## Application-Specific Guidance
 
